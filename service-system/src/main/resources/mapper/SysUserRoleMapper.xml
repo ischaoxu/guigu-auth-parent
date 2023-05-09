@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiselzx.system.mapper.SysUserRoleMapper">
+    <delete id="deleteRolesByUserId">
+        delete
+        * from sys_user_role where user_id =
+        #{userId}
+    </delete>
+
+    <insert id="saveRolesByUserId">
+        insert into sys_user_role(role_id,user_id)
+        <foreach collection="roleIdList" item="emp" separator="," open="values">
+            <!-- 在foreach标签内部如果需要引用遍历得到的具体的一个对象，需要使用item属性声明的名称 -->
+            (#{emp},#{userId})
+        </foreach>
+
+    </insert>
+</mapper>
