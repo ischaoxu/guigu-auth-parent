@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cd74593-d2b5-419d-8c0d-248477dfbd7e" name="Changes" comment="通用权限系统后端 第2次提交" />
+    <list default="true" id="8cd74593-d2b5-419d-8c0d-248477dfbd7e" name="Changes" comment="通用权限系统后端 第1次提交">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/SysMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/SysMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysMenuServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,35 +54,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/IDEAWorkspace/guigu-auth-parent",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "spring.configuration.checksum": "e9eeca287f286f0aba905a2ee1f70a76",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IDEAWorkspace/guigu-auth-parent&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e9eeca287f286f0aba905a2ee1f70a76&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IDEAWorkspace\guigu-auth-parent\service-system\src\main\resources\mapper" />
@@ -170,6 +174,9 @@
       <workItem from="1683539879363" duration="9609000" />
       <workItem from="1683592306126" duration="22093000" />
       <workItem from="1683634144005" duration="3978000" />
+      <workItem from="1683638282114" duration="328000" />
+      <workItem from="1683640221555" duration="869000" />
+      <workItem from="1683681545387" duration="2936000" />
     </task>
     <task id="LOCAL-00001" summary="通用权限系统后端 第1次提交">
       <created>1683635340597</created>
@@ -185,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683636164280</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="通用权限系统后端 第1次提交">
+      <created>1683638447173</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683638447173</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,9 +217,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="通用权限系统后端 第1次提交" />
     <MESSAGE value="通用权限系统后端 第2次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="通用权限系统后端 第2次提交" />
+    <MESSAGE value="通用权限系统后端 第1次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="通用权限系统后端 第1次提交" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

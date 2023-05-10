@@ -20,4 +20,10 @@ public interface SysMenuService extends IService<SysMenu> {
      */
     List<SysMenu> findTree();
 
+    /**
+     * 根据id删除菜单
+     * @param id
+     * @return
+     */
+    boolean delById(Long id);
 }
