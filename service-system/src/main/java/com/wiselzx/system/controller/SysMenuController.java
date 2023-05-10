@@ -3,10 +3,12 @@ package com.wiselzx.system.controller;
 
 import com.wiselzx.common.result.Result;
 import com.wiselzx.model.system.SysMenu;
+import com.wiselzx.model.vo.AssignMenuVo;
 import com.wiselzx.system.service.SysMenuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,6 +28,26 @@ public class SysMenuController {
 
     @Autowired
     private SysMenuService sysMenuService;
+
+    @ApiOperation(value = "保存角色菜单数据")
+    @PostMapping("/doAssign")
+    public  Result changeRoelMenu(@RequestBody AssignMenuVo assignMenuVo) {
+        Boolean ischange = sysMenuService.changeRoleMenu(assignMenuVo);
+        if (ischange) {
+            return  Result.ok();
+        }
+        return Result.fail();
+    }
+
+    @GetMapping("/toAssign/{id}")
+    @ApiOperation(value = "根据角色id获取菜单数据")
+    public Result toAssign(@PathVariable("id") Long roleId) {
+        List<SysMenu> sysMenuList = sysMenuService.findRoleMenu(roleId);
+        if (!CollectionUtils.isEmpty(sysMenuList)) {
+            return  Result.ok(sysMenuList);
+        }
+        return Result.fail();
+    }
 
     @ApiOperation(value = "添加菜单")
     @PostMapping

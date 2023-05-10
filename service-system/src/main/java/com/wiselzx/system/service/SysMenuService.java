@@ -2,6 +2,7 @@ package com.wiselzx.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wiselzx.model.system.SysMenu;
+import com.wiselzx.model.vo.AssignMenuVo;
 
 import java.util.List;
 
@@ -26,4 +27,19 @@ public interface SysMenuService extends IService<SysMenu> {
      * @return
      */
     boolean delById(Long id);
+
+    /**
+     * 根据角色id获取菜单数据
+     * @param roleId
+     * @return
+     */
+    List<SysMenu> findRoleMenu(Long roleId);
+
+    /**
+     * 保存角色菜单数据
+     * @param assignMenuVo
+     * @return
+     */
+    Boolean changeRoleMenu(AssignMenuVo assignMenuVo);
+
 }

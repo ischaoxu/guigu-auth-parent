@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiselzx.system.mapper.SysRoleMenuMapper">
+
+
+    <insert id="insertRoleMenu">
+        insert into sys_role_menu(role_id,menu_id)
+        <foreach collection="menuIdList" item="emp" separator="," open="values">
+            <!-- 在foreach标签内部如果需要引用遍历得到的具体的一个对象，需要使用item属性声明的名称 -->
+            (#{roleId},#{emp})
+        </foreach>
+
+    </insert>
+</mapper>
