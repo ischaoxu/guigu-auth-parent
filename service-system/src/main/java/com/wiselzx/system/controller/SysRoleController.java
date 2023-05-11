@@ -101,6 +101,7 @@ public class SysRoleController {
     @ApiOperation(value = "获取全部角色")
     @GetMapping("/findAll")
     public Result findAll() {
+
         List<SysRole> list = sysRoleService.list();
         return Result.ok(list);
     }

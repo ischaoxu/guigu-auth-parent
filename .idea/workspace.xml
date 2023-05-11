@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cd74593-d2b5-419d-8c0d-248477dfbd7e" name="Changes" comment="通用权限系统后端 第2次提交">
-      <change afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/mapper/SysRoleMenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-system/src/main/resources/mapper/SysRoleMenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-util/common-util.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/service-util/service-util.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/spring-security/spring-security.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/model.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-system/service-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-util/src/main/java/com/wiselzx/common/helper/MenuHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/src/main/java/com/wiselzx/common/helper/MenuHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/wiselzx/model/system/SysRoleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/wiselzx/model/system/SysRoleMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/SysMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/SysMenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysMenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysRoleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,9 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -30,6 +31,12 @@
         <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../Maven/repository/org/springframework/spring-aop/5.2.11.RELEASE/spring-aop-5.2.11.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,6 +74,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "D:/IDEAWorkspace/shoppingMall-main",
@@ -77,7 +85,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "com.zeroturnaround.javarebel.idea.plugin.settings.JRebelSettingsComponent",
     "spring.configuration.checksum": "e9eeca287f286f0aba905a2ee1f70a76",
     "vue.rearranger.settings.migration": "true"
   },
@@ -87,6 +95,9 @@
     ]
   }
 }]]></component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IDEAWorkspace\guigu-auth-parent\service-system\src\main\resources\mapper" />
@@ -183,7 +194,8 @@
       <workItem from="1683640221555" duration="869000" />
       <workItem from="1683681545387" duration="2936000" />
       <workItem from="1683687897341" duration="1818000" />
-      <workItem from="1683697747743" duration="8901000" />
+      <workItem from="1683697747743" duration="9813000" />
+      <workItem from="1683718689379" duration="4331000" />
     </task>
     <task id="LOCAL-00001" summary="通用权限系统后端 第1次提交">
       <created>1683635340597</created>
@@ -213,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683687945478</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="通用权限系统后端 第2次提交">
+      <created>1683715271244</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683715271244</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,12 +257,7 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysMenuServiceImpl.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysMenuController.java</url>
           <line>44</line>
           <option name="timeStamp" value="3" />
