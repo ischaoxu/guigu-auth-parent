@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -32,10 +33,14 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
     @Override
     public HashMap<String, List> findUserRoles(Long userId) {
         List<SysRole> roleList = baseMapper.selectRoleListByUserId(userId);
+        ArrayList<Long> arrayList = new ArrayList<>();
+        roleList.forEach(sysRole -> {
+            arrayList.add(sysRole.getId());
+        });
         List<SysRole> sysRoleList = baseMapper.selectList(null);
         HashMap<String, List> map = new HashMap<>();
-        map.put("userRoles", roleList);
-        map.put("sysRoleList", sysRoleList);
+        map.put("userRoleIds", arrayList);
+        map.put("allRoles", sysRoleList);
         return map;
     }
 

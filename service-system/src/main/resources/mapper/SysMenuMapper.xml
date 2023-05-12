@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wiselzx.system.mapper.SysMenuMapper">
+    <resultMap id="baseMenu" type="com.wiselzx.model.system.SysMenu">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="path" column="path" jdbcType="VARCHAR"/>
+        <result property="component" column="component" jdbcType="VARCHAR"/>
+        <result property="perms" column="perms" jdbcType="VARCHAR"/>
+        <result property="icon" column="icon" jdbcType="VARCHAR"/>
+        <result property="sortValue" column="sort_value" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="DATE"/>
+        <result property="updateTime" column="update_time" jdbcType="DATE"/>
+        <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+    </resultMap>
 
+    <select id="selectMenusInfoByUserId" resultMap="baseMenu">
+        SELECT DISTINCT
+            menu.id,menu.parent_id,menu.name,menu.type,menu.path,
+            menu.component,menu.perms,menu.icon,menu.sort_value,
+            menu.status,menu.create_time,menu.update_time,menu.is_deleted
+        FROM
+            sys_menu menu INNER JOIN sys_role_menu srm ON srm.menu_id = menu.id
+                          INNER JOIN sys_user_role sur ON  srm.role_id = sur.role_id
+        WHERE sur.user_id = #{userId}
+        AND menu.is_deleted = 0
+        AND srm.is_deleted = 0
+        AND sur.is_deleted = 0
+        AND menu.status = 1
+    </select>
 </mapper>

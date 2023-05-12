@@ -39,8 +39,8 @@ public class SysMenuController {
         return Result.fail();
     }
 
-    @GetMapping("/toAssign/{id}")
     @ApiOperation(value = "根据角色id获取菜单数据")
+    @GetMapping("/toAssign/{id}")
     public Result toAssign(@PathVariable("id") Long roleId) {
         List<SysMenu> sysMenuList = sysMenuService.findRoleMenu(roleId);
         if (!CollectionUtils.isEmpty(sysMenuList)) {
@@ -50,21 +50,21 @@ public class SysMenuController {
     }
 
     @ApiOperation(value = "添加菜单")
-    @PostMapping
+    @PostMapping("/save")
     public Result addMenu(@RequestBody SysMenu sysMenu) {
         boolean save = sysMenuService.save(sysMenu);
         if (save) return Result.ok();
         return Result.fail();
     }
     @ApiOperation(value = "根据id删除菜单")
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/remove/{id}")
     public Result removeMenu(@PathVariable("id") Long id) {
         boolean b = sysMenuService.delById(id);
         if (b) return Result.ok();
         return Result.fail();
     }
     @ApiOperation(value = "修改菜单")
-    @PutMapping
+    @PutMapping("/update")
     public Result removeMenu(@RequestBody SysMenu sysMenu) {
         boolean b = sysMenuService.updateById(sysMenu);
         if (b) return Result.ok();
@@ -77,7 +77,7 @@ public class SysMenuController {
         return Result.ok(sysMenu);
     }
     @ApiOperation(value = "获取菜单")
-    @GetMapping
+    @GetMapping("/findNodes")
     public Result findMenu() {
         List<SysMenu> list = sysMenuService.findTree();
         return Result.ok(list);

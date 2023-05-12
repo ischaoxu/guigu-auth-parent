@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cd74593-d2b5-419d-8c0d-248477dfbd7e" name="Changes" comment="通用权限系统后端 第2次提交">
-      <change afterPath="$PROJECT_DIR$/common/common-util/common-util.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-util/service-util.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/spring-security/spring-security.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/model.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-system/service-system.iml" afterDir="false" />
+    <list default="true" id="8cd74593-d2b5-419d-8c0d-248477dfbd7e" name="Changes" comment="通用权限系统后端 第3次提交">
+      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/wiselzx/system/config/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-util/common-util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/common-util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/service-util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/service-util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/service-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/service-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/mapper/SysMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/mapper/SysMenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/wiselzx/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/resources/mapper/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/resources/mapper/SysMenuMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -196,6 +206,8 @@
       <workItem from="1683687897341" duration="1818000" />
       <workItem from="1683697747743" duration="9813000" />
       <workItem from="1683718689379" duration="4331000" />
+      <workItem from="1683767463965" duration="1727000" />
+      <workItem from="1683857090307" duration="17999000" />
     </task>
     <task id="LOCAL-00001" summary="通用权限系统后端 第1次提交">
       <created>1683635340597</created>
@@ -232,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683715271244</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="通用权限系统后端 第3次提交">
+      <created>1683767586493</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683767586493</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +271,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="通用权限系统后端 第1次提交" />
     <MESSAGE value="通用权限系统后端 第2次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="通用权限系统后端 第2次提交" />
+    <MESSAGE value="通用权限系统后端 第3次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="通用权限系统后端 第3次提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

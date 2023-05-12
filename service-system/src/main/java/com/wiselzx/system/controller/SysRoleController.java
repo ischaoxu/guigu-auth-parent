@@ -33,14 +33,14 @@ public class SysRoleController {
     private SysRoleService sysRoleService;
 
     @ApiOperation(value = "根据用户获取角色数据")
-    @GetMapping("/userRole/{userId}")
+    @GetMapping("/toAssign/{userId}")
     public Result findUserRoles(@PathVariable("userId") Long userId) {
         HashMap<String, List> map = sysRoleService.findUserRoles(userId);
         return Result.ok(map);
     }
 
     @ApiOperation(value = "根据用户保存分配角色")
-    @PutMapping("/changeUserRole")
+    @PostMapping("/doAssign")
     public Result changeUserRole(@RequestBody AssignRoleVo assignRoleVo) {
         boolean isChange = sysRoleService.changeUserRole(assignRoleVo);
         if (isChange) return Result.ok();
@@ -50,7 +50,7 @@ public class SysRoleController {
 
 
     @ApiOperation(value = "修改角色")
-    @PutMapping
+    @PutMapping("/update")
     public Result upRole(@RequestBody SysRole sysRole) {
         boolean update = sysRoleService.updateById(sysRole);
         if (update) {
@@ -60,7 +60,7 @@ public class SysRoleController {
     }
 
     @ApiOperation(value = "id删除角色")
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/remove/{id}")
     public Result deleteRole(@PathVariable("id") Long id) {
         boolean remove = sysRoleService.removeById(id);
         if (remove) {
@@ -70,7 +70,7 @@ public class SysRoleController {
     }
 
     @ApiOperation("id批量删除")
-    @DeleteMapping
+    @DeleteMapping("/batchRemove")
     public Result batchDelete(@RequestBody List<Long> idlist) {
         boolean remove = sysRoleService.removeByIds(idlist);
         if (remove) {
@@ -81,7 +81,7 @@ public class SysRoleController {
     }
 
     @ApiOperation(value = "id获取角色")
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Result showRoleById(@PathVariable("id") Long id) {
         SysRole sysRole = sysRoleService.getById(id);
         return Result.ok(sysRole);
@@ -107,7 +107,7 @@ public class SysRoleController {
     }
 
     @ApiOperation(value = "分页条件查询")
-    @GetMapping("/{current}/{limit}")
+    @GetMapping("/findQueryPage/{current}/{limit}")
     public Result findPage(@PathVariable("current") Long current, @PathVariable("limit") Long limit, SysRoleQueryVo sysRoleQueryVo) {
         Page<SysRole> rolePage = new Page<>(current, limit);
         String roleName = sysRoleQueryVo.getRoleName();
