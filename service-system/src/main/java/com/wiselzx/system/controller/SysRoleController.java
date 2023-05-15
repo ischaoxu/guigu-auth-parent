@@ -11,6 +11,7 @@ import com.wiselzx.system.service.SysRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,7 +39,7 @@ public class SysRoleController {
         HashMap<String, List> map = sysRoleService.findUserRoles(userId);
         return Result.ok(map);
     }
-
+    @PreAuthorize("hasAuthority('bnt.sysRole.update')")
     @ApiOperation(value = "根据用户保存分配角色")
     @PostMapping("/doAssign")
     public Result changeUserRole(@RequestBody AssignRoleVo assignRoleVo) {
@@ -48,7 +49,7 @@ public class SysRoleController {
 
     }
 
-
+    @PreAuthorize("hasAuthority('bnt.sysRole.update')")
     @ApiOperation(value = "修改角色")
     @PutMapping("/update")
     public Result upRole(@RequestBody SysRole sysRole) {
@@ -58,7 +59,7 @@ public class SysRoleController {
         }
         return Result.fail();
     }
-
+    @PreAuthorize("hasAuthority('bnt.sysRole.remove')")
     @ApiOperation(value = "id删除角色")
     @DeleteMapping("/remove/{id}")
     public Result deleteRole(@PathVariable("id") Long id) {
@@ -68,7 +69,7 @@ public class SysRoleController {
         }
         return Result.fail();
     }
-
+    @PreAuthorize("hasAuthority('bnt.sysRole.remove')")
     @ApiOperation("id批量删除")
     @DeleteMapping("/batchRemove")
     public Result batchDelete(@RequestBody List<Long> idlist) {
@@ -79,14 +80,14 @@ public class SysRoleController {
         }
         return Result.fail();
     }
-
+    @PreAuthorize("hasAuthority('bnt.sysRole.list')")
     @ApiOperation(value = "id获取角色")
     @GetMapping("/get/{id}")
     public Result showRoleById(@PathVariable("id") Long id) {
         SysRole sysRole = sysRoleService.getById(id);
         return Result.ok(sysRole);
     }
-
+    @PreAuthorize("hasAuthority('bnt.sysRole.add')")
     @ApiOperation(value = "添加角色")
     @PostMapping("/save")
     public Result save(@RequestBody SysRole sysRole) {
@@ -97,7 +98,7 @@ public class SysRoleController {
         }
         return Result.fail();
     }
-
+    @PreAuthorize("hasAuthority('bnt.sysRole.list')")
     @ApiOperation(value = "获取全部角色")
     @GetMapping("/findAll")
     public Result findAll() {
@@ -105,7 +106,7 @@ public class SysRoleController {
         List<SysRole> list = sysRoleService.list();
         return Result.ok(list);
     }
-
+    @PreAuthorize("hasAuthority('bnt.sysRole.list')")
     @ApiOperation(value = "分页条件查询")
     @GetMapping("/findQueryPage/{current}/{limit}")
     public Result findPage(@PathVariable("current") Long current, @PathVariable("limit") Long limit, SysRoleQueryVo sysRoleQueryVo) {

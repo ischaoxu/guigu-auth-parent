@@ -13,6 +13,7 @@ import com.wiselzx.system.service.SysUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,6 +48,7 @@ public class SysUserController {
      *
      * @return
      */
+    @PreAuthorize("hasAuthority('bnt.sysUser.list')")
     @ApiOperation(value = "分页查看所有用户")
     @GetMapping("/{page}/{limit}")
     public Result findPageAll(@PathVariable("page") Integer page, @PathVariable("limit") Integer limit, SysUserQueryVo sysUserQueryVo) {
@@ -132,12 +134,12 @@ public class SysUserController {
 
     @ApiOperation(value = "修改状态")
     @GetMapping("/updateStatus/{id}/{status}")
-    public Result changeStatus( @PathVariable("id") Long id ,
-                                @PathVariable("status") Integer status) {
+    public Result changeStatus(@PathVariable("id") Long id,
+                               @PathVariable("status") Integer status) {
         LambdaQueryWrapper<SysUser> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(BaseEntity::getId, id);
         if (status != 0 && status != 1) {
-            throw  new MyException("错误的状态数据");
+            throw new MyException("错误的状态数据");
         }
         SysUser user = new SysUser();
         user.setStatus(status);

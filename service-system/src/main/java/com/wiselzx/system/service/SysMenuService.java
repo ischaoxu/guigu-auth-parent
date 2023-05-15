@@ -42,4 +42,10 @@ public interface SysMenuService extends IService<SysMenu> {
      */
     Boolean changeRoleMenu(AssignMenuVo assignMenuVo);
 
+    /**
+     * 根据用户id获取所有对应角色的按钮权限
+     * @param id
+     * @return
+     */
+    List<String> findPermsListByUserId(Long id);
 }

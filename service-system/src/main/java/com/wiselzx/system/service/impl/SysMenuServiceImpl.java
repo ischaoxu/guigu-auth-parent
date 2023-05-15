@@ -18,6 +18,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -39,6 +40,26 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         if (!CollectionUtils.isEmpty(assignMenuVo.getMenuIdList()))
             sysRoleMenuMapper.insertRoleMenu(assignMenuVo.getRoleId(),assignMenuVo.getMenuIdList());
         return true;
+    }
+
+    @Override
+    public List<String> findPermsListByUserId(Long id) {
+        //管理员，查询所有权限数据
+        List<SysMenu> sysMenuList = null;
+        if(id == 1L) {
+            sysMenuList = baseMapper.selectList(null);
+        } else {//不是管理员，调用方法，根据userid查询权限数据
+            sysMenuList = baseMapper.selectMenusInfoByUserId(id);
+        }
+
+        //List<SysMenu> ==  List<String>  perms值
+        //stream流
+        List<String> permsList = sysMenuList.stream()
+                .filter(item -> item.getType() == 2)
+                .map(item -> item.getPerms())
+                .collect(Collectors.toList());
+
+        return permsList;
     }
 
     @Override

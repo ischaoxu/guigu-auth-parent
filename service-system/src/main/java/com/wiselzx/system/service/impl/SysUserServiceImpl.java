@@ -20,6 +20,7 @@ import java.util.List;
  * @since 2023-05-08
  */
 @Service
+
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService {
 
     @Autowired
@@ -31,4 +32,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         }
         return sysMenuMapper.selectMenusInfoByUserId(userId);
     }
+
+
 }

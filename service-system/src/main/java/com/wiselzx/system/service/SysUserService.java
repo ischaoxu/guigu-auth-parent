@@ -22,4 +22,6 @@ public interface SysUserService extends IService<SysUser> {
      * @return
      */
     List<SysMenu> getMenusInfoByUserId(Long userId);
+
+
 }

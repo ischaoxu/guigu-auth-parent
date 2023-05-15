@@ -51,6 +51,10 @@ public class IndexController {
         if (!sysUser.getPassword().equals(MD5.encrypt(loginVo.getPassword()))) {
             throw new MyException("用户名密码错误");
         }
+        if (sysUser.getStatus() == 0) {
+            throw new MyException("用户已经被禁用");
+
+        }
         String token = UUID.randomUUID().toString().replaceAll("-", "");
         redisTemplate.opsForValue().set(token,sysUser,1, TimeUnit.MINUTES);
         HashMap<String, Object> map = new HashMap<>();
